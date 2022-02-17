@@ -8,43 +8,57 @@ let gb = 0 // Gingerbread
 let cc = 0 // Chocolate Chip
 let sugar = 0 // Sugar Sprinkle
 
-const gbPlusBtn = document.querySelector('#add-gb')
-const gbQuantity = document.querySelector('#qty-gb')
+let totalQty = document.querySelector('#qty-total');
+
+//gb
+const gbPlusBtn = document.querySelector('#add-gb');
+const gbQuantity = document.querySelector('#qty-gb');
+
 gbPlusBtn.addEventListener('click', function(e){
-    gb = gb + 1
+    gb = gb + 1;
     gbQuantity.textContent = gb;
+    totalQty.textContent = gb + cc + sugar;
 });
 
 const gbMinusBtn = document.querySelector('#minus-gb')
 gbMinusBtn.addEventListener('click', function(e){
-    gb = gb - 1
+    gb = gb - 1;
     gbQuantity.textContent = gb;
+    totalQty.textContent = gb + cc + sugar;
 });
 
+//cc
 const ccPlusBtn = document.querySelector('#add-cc')
 const ccQuantity = document.querySelector('#qty-cc')
+
 ccPlusBtn.addEventListener('click', function(e){
-    cc = cc + 1
+    cc = cc + 1;
     ccQuantity.textContent = cc;
+    totalQty.textContent = gb + cc + sugar;
 });
 
 const ccMinusBtn = document.querySelector('#minus-cc')
 ccMinusBtn.addEventListener('click', function(e){
-    cc = cc - 1
+    cc = cc - 1;
     ccQuantity.textContent = cc;
+    totalQty.textContent = gb + cc + sugar;
 });
 
+//sugar
 const sugarPlusBtn = document.querySelector('#add-sugar')
 const sugarQuantity = document.querySelector('#qty-sugar')
+
 sugarPlusBtn.addEventListener('click', function(e){
-    sugar = sugar + 1
+    sugar = sugar + 1;
     sugarQuantity.textContent = sugar;
+    totalQty.textContent = gb + cc + sugar;
 });
 
 const sugarMinusBtn = document.querySelector('#minus-sugar')
 sugarMinusBtn.addEventListener('click', function(e){
-    sugar = sugar - 1
+    sugar = sugar - 1;
     sugarQuantity.textContent = sugar;
+    totalQty.textContent = gb + cc + sugar;
 });
 // selecting the element with an id of credit
 const credit = document.querySelector('#credit')
